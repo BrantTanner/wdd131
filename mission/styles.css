@@ -1,0 +1,30 @@
+
+h1, h2{
+    text-align: center;
+    
+}
+
+h1{
+    font-size: 40px;
+}
+
+h2 {
+    border-bottom: 2px solid rgba(211, 211, 211, 0.6);
+    color: rgb(0, 157, 255);
+    font-size: medium;
+    text-decoration: none;
+}
+
+body {
+    font-size: 15px;
+    padding-top: 30px;
+    padding: 80px;
+    line-height: 25px;
+    text-align: left;
+}
+#logo{
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
