@@ -1,0 +1,52 @@
+9/22
+// Selecting elements
+querySelector()
+const element = document.querySelector("#myIdName");
+
+querySelectorAll()
+const elements = document.querySelectorAll(".myClassName")
+
+// Content properties
+.innerHTML
+element.innerHTML = "<p>New content</p>";
+
+.innerText
+element.innerTExt = "New test content";
+
+.textContent
+element.textContent = "New text content";
+
+.value
+inputElement.value = "New input value";
+
+let user input = inputElement.value
+
+// Style Properies
+.style
+element.style.color = "blue"; 
+element.style.backgroundColor = "yellow";
+element.style.fontSize = "20px";
+
+.myClassName
+element.className = "newClass";
+
+.add(), .remove(), .toggle()
+
+// Create and Remove
+
+.createElement()
+const newParagraph = document.createElement("p");
+new newParagraph.textContent = "This is new paragraph content.";
+
+.appendChild()
+const container = document.getElementById("container");
+container.appendChild = 
+
+// Attibute
+.setAttribute()
+element.setAttribute("src", "new-image.jpg");
+
+.getAttribute()
+let src = element
+
+.removeAttributeNS()
