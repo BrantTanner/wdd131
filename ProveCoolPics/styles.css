@@ -1,0 +1,89 @@
+body{
+    margin:0px;
+}
+
+header{
+    text-align: center;
+    color:white;
+    background-color: rgb(0, 204, 255);
+    padding-bottom:0px;
+    padding-top: 20px;
+}
+
+nav{
+    display:none
+}
+
+h1, h2{
+    margin:0px
+}
+
+button{
+    border: none;
+    background: none;
+    color:white;
+    padding-top: 20px;
+}
+
+button:hover{
+    text-decoration: underline;
+}
+
+h2{
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+
+main{
+    text-align: center;
+    background-color: rgb(195, 191, 191);
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+    border-radius: 6px;
+
+}
+
+#coolpicGrid{
+    grid-template-columns: 1fr
+}
+
+.coolpic1, .coolpic2, .coolpic3, .coolpic4, .coolpic5, .coolpic6, .coolpic7, .coolpic8, .coolpic9 {
+    padding-bottom: 0px;
+}
+
+footer{
+    background-color:rgb(0, 204, 255);
+    color:white;
+}
+
+
+
+@media screen and (min-width: 700px) {
+
+
+    #coolpicGrid{
+        grid-template-columns: 1fr 1fr;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    
+    button{
+        display: none; 
+    }
+
+    nav{
+        display: inline;
+    }
+
+    #coolpicGrid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
