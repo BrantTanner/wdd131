@@ -50,7 +50,11 @@ img {
 }
 
 #coolpicGrid{
-    grid-template-columns: 1fr
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    justify-items: center;
+    
 }
 
 .coolpic1, .coolpic2, .coolpic3, .coolpic4, .coolpic5, .coolpic6, .coolpic7, .coolpic8, .coolpic9 {
@@ -70,6 +74,7 @@ footer{
     #coolpicGrid{
         grid-template-columns: 1fr 1fr;
         padding-right: 20px;
+        column-gap: 15px;
     }
 }
 
