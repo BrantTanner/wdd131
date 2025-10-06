@@ -95,11 +95,19 @@ footer {
 
     }
 
+    .hide {
+    display:block;
+    }
+
 }
 
 @media screen and (min-width: 1000px) {
     main {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .hide {
+    display:block;
     }
 }
           
