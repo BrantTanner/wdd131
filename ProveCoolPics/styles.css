@@ -1,17 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     margin:0px;
+    font-family: 'Sour Gummy', sans-serif;
 }
 
 header{
     text-align: center;
     color:white;
-    background-color: rgb(0, 204, 255);
-    padding-bottom:0px;
+    background-color: rgb(0, 106, 255);
+    padding-bottom:15px;
     padding-top: 20px;
 }
 
 nav{
     display:none
+}
+nav.nav {
+    display: block;
+}
+
+nav a {
+    padding: 20px;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    display: block;
+    border-top: none;
 }
 
 h1, h2{
@@ -23,11 +38,13 @@ button{
     background: none;
     color:white;
     padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: xx-large;
 }
 
-button:hover{
+/* button:hover{
     text-decoration: underline;
-}
+} */
 
 h2{
     padding-top:15px;
@@ -54,6 +71,7 @@ img {
     grid-template-columns: 1fr;
     row-gap: 25px;
     justify-items: center;
+    padding-bottom: 20px;
     
 }
 
@@ -62,10 +80,33 @@ img {
 }
 
 footer{
-    background-color:rgb(0, 204, 255);
+    background-color:rgb(0, 106, 255);
     color:white;
+    padding-top: 10px;
 }
 
+/* modal */
+
+dialog img {
+    width: 90%;
+    display: black;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8)
+}
+.close-viewer {
+    position: absolute;
+    top: 15vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
 
 
 @media screen and (min-width: 700px) {
@@ -79,10 +120,43 @@ footer{
 }
 
 @media screen and (min-width: 1000px) {
+
+    dialog img {
+        width: 60%;
+        margin: 15vh auto;
+    }
+
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
+        background-color: transparent;
+        border: none;
+        color: white;
+    }
+
+    .viewer {
+        margin: 50px;
+        padding: 50px;
+    }
+
+    .viewer img{
+        max-width: 800px;
+    }
     
-    button{
+    .menu-btn{
         display: none; 
     }
+
+    nav a {
+    padding: 25px;
+
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    display: inline;
+    text-align: center;
+    border-top: none;
+}
+
 
     nav{
         display: inline;

@@ -30,7 +30,7 @@ section {
 }
 nav a {
     padding: 20px;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     text-align: center;
     display: block;
@@ -108,6 +108,28 @@ footer {
     
     .hide {
     display:block;
+    }
+
+    dialog img {
+        width: 60%;
+        margin: 15vh auto;
+    }
+
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
+        background-color: transparent;
+        border: none;
+        color: white;
+    }
+
+    .viewer {
+        margin: 50px;
+        padding: 50px;
+    }
+
+    .viewer img {
+        max-width: 800px;
     }
 }
           
