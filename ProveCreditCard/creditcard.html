@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="creditcard.css">
+    <script src="creditcard.js" defer></script>
+</head>
+<body>
+    <form id="formContainer">
+        <section id="frontCard">
+            <p id="total">TOTAL: $199<p>
+            <h1>💳</h1>
+            <div id="creditCardNumberContainer">
+                <label id="creditCardLabel" for="creditCardNumber">Credit Card Number:</label>
+                <input
+                type="text"
+                id="creditCardNumber"
+                name="creditCardNumber"
+                pattern="[0-9]{16}"
+                placeholder="Enter 16 digits"
+                required
+                />
+            </div>
+            <div id="cardHolderContainer">
+                <label id="cardHolderLabel" for="cardHolderName">Card Holder:</label>
+                <input
+                type="text"
+                id="cardHolderName"
+                name="cardHolderName"
+                placeholder="John Doe"
+                aria-labelledby="cardHolder"
+                />
+            </div>
+            <div id="expirationDateContainer">
+                <label for="expirationDate">Expiration:</label>
+                <div id="month/date">
+                    <input
+                    type="text"
+                    id="month"
+                    name="expMonth"
+                    placeholder="MM"
+                    aria-labelledby="expirationDate"
+                    />
+                    <input
+                    type="text"
+                    id="year"
+                    name="expYear"
+                    placeholder="YY"
+                    aria-labelledby="expirationDate"
+                    />
+                </div>
+            </div>
+        </section>
+        <section id="backCard">
+            <div id="cvcCvv">
+                <label for="cvc/cvvCode">CVC/CVV</label>
+                <input
+                type="text"
+                id="cvc/cvv"
+                name="cvcCvv"
+                placeholder="xxx"
+                aria-labelledby="cvc/cvvCode"
+                />
+            </div>
+        </section>
+    </form>
+    <button type="submit">Submit</button>
+
+
+            
+
+    </p>
+</body>
+</html>

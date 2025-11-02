@@ -1,0 +1,117 @@
+#formContainer{
+display: grid;
+grid-template-columns: 1fr 60% 1fr;
+grid-template-rows: 1fr 50% 1fr 1fr;
+
+}
+
+#frontCard{
+    display:grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: #808080;
+    column-gap: 5%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 2);
+    border-radius: 15px;
+    max-width: 50%;
+    max-height: 50%;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    z-index: 2;
+}
+#total{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: left;
+    padding-top: 8%;
+    padding-left: 5%;
+}
+h1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#creditCardNumberContainer{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    padding-left: 5%;
+
+}
+#creditCardNumber{
+    max-width: 60%;
+    font-size: x-large;
+}
+#cardHolderContainer
+{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    padding-left: 5%;
+}
+#cardHolderName{
+    max-width: 60%;
+    font-size: x-large;
+}
+#expirationDateContainer{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    padding-bottom: 5%;
+    padding-right: 5%;
+
+}
+#month\/date {  /* Need to escape the forward slash in CSS ID selector */
+    display: flex;
+    gap: 10px;  /* Adds space between the month and year inputs */
+    align-items: center;  /* Vertically centers the inputs */
+}
+#month,#year{
+    max-width: 20%;
+    font-size: x-large;
+}
+
+#backCard{
+    display: grid;
+    position: relative;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr 10% 1fr;
+    background-color: #808080;
+    margin-top: 20px;
+    padding-top: 20%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 2);
+    border-radius: 15px;
+    max-width: 50%;
+    max-height: 8%;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    margin-top: -2%;
+    margin-left: -15%;
+}
+#backCard::after{
+    content: '';
+    position: absolute;
+    top: 10%;  /* Adjust this value to move the black strip down */
+    left: 0;
+    width: 100%;
+    height: 35px;  /* This is the thickness of the black strip */
+    background-color: black;
+}
+
+#cvcCvv{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding-bottom: 30px;
+    margin-left: 25%;
+    margin-top: -30%;
+    font-size: x-large
+}
+#cvc\/cvv{
+    font-size: x-large;
+    max-width: 85%;
+}
