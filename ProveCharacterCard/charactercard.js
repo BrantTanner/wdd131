@@ -1,23 +1,39 @@
 const stats = {
-    class: 'Class: Lizard Creature Dipolomat',
+    characterClass: 'Class: Lizard Creature Dipolomat',
+    levelName: "Level:",
     level: 5,
+    healthName: "Health:",
     health: 20,
 
-    attack: function(health){
-        health =- 5;
-
-        return health
+    attack: function(){
+        this.health -= 5;
+        document.querySelector('#health').textContent = stats.health;
+        if (this.health == 0){
+            alert(`${document.querySelector('.name').textContent} is dead!`);
+        }
     },
-    levelUp: function(level, health){
-        level =+ 1;
-        health =+ 5;
-        return  level, health
+    levelUp: function(){
+        this.level += 1;
+        this.health += 5;
+        document.querySelector('#level').textContent = stats.level;
+        document.querySelector('#health').textContent = stats.health;
     }
 };
 
-document.querySelector('#class').textContent = stats.class;
-document.querySelector('#level').textContent = stats.level;
-document.querySelector('#health').textContent = stats.health;
+function renderStats(){
+    document.querySelector('#class').textContent = stats.characterClass;
+    document.querySelector('#level').textContent = 'Level: ' + stats.level;
+    document.querySelector('#health').textContent = 'Health: ' + stats.health;
+}
 
-document.querySelector('#attackButton').addEventListener("click", attack())
-document.querySelector('#levelUpButton').addEventListener("click", levelUp())
+renderStats();
+
+document.querySelector('.attackButton').addEventListener("click", () => {
+    stats.attack();
+    renderStats();
+});
+
+document.querySelector('.levelUpButton').addEventListener("click", () => {
+    stats.levelUp();
+    renderStats();
+});
