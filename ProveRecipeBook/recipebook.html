@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Book</title>
     <link rel="stylesheet" href="recipebook.css">
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RecipeBook">
+    <meta property="og:description" content="A recipe book for all of you favorite recipes!">
+    <meta property="og:url" content="Your URL">
+    <meta property="og:image" content="social-preview-image.png">
+
+    <!-- X Card -->
+    <meta name="twitter:card" content="Social Preview Image">
+    <meta name="twitter:title" content="Your Title">
+    <meta name="twitter:description" content="Your Description">
+    <meta name="twitter:image" content="social-preview-image.png">
+
+    <!-- One favicon (ICO works everywhere) -->
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- One Apple Touch Icon (iOS home screen) -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+                
 </head>
 <body>
     <div id="title-container">
@@ -13,27 +33,31 @@
     </div>
 
     <form id="search" action="/search" method="get">
-        <input type="search" id="search-input" name="q" placeholder="Search...">
+        <input type="search" id="search-input" name="q" placeholder="Find recipe">
         <button type="submit">
             <img src="images/search.svg" alt="Search Icon" width="20px" height="20px">
         </button>
     </form>
-
+    <hr>
     <section id="recipe-container">
-        <img src="images/apple-crisp.jpg" alt="Apple Crisp Picture">
+        <img src="images/apple-crisp.jpg" alt="Apple Crisp Picture" width="500px" heigth="auto">
         
         <div id="recipe-content">
             <button type="button">Dessert</button>
             <h2>Apple Crisp</h2>
-            <h2>⭐⭐⭐⭐☆</h2>
+            <h3>⭐⭐⭐⭐☆</h3>
+            <p>This apple crisp recipe is a simple ye delicous fall dessert that's great served warm with vanilla ice cream </p>
         </div>
     </section>
 
     <div id="social-media-tags">
-        <img src="images/instagram_icon.svg" alt="Instagram Icon" width="20px" height="20px">
-        <img src="images/youtube_icon.svg" alt="Youtube Icon" width="20px" height="20px">
-        <img src="images/pinterest_icon.svg" alt="Pinterest Icon" width="20px" height="20px">
-        
+
+        <div>
+            <img src="images/instagram_icon.svg" alt="Instagram Icon" width="20px" height="20px">
+            <img src="images/youtube_icon.svg" alt="Youtube Icon" width="20px" height="20px">
+            <img src="images/pinterest_icon.svg" alt="Pinterest Icon" width="20px" height="20px">
+        </div>
+
         <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>                   
     </div>
                  

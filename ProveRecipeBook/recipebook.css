@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Monoton&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     text-align: center;
 }
@@ -19,6 +21,18 @@ body {
     width: 70%;
 }
 
+hr{
+    max-width: 90%;
+    border-color: lightslategray;
+    margin-top: -1%;
+}
+
+h2{
+    color:aqua;
+    font-family: "amatic sc";
+    font-size: xx-large ;
+}
+
 #recipe-container{
     display: flex;
     flex-direction: column;
@@ -27,8 +41,50 @@ body {
 }
 #recipe-container img{
     max-width: 95%;
+    padding-left: 3%;
+    padding-top: 2%;
 }
 
 #recipe-content{
-    align-items: ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 3%;
+    padding-top: 1%;
+}
+#recipe-content p{
+    display: none;
+}
+
+#social-media-tags{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding-top: 15px;
+}
+
+
+@media screen and (min-width: 700px ) {
+    #recipe-container{
+        flex-direction: row;
+    }
+
+    #recipe-content{
+        padding-top: 2%;
+    }
+
+    #recipe-content p{
+        display: block;
+        text-align: left;
+    }
+
+    #recipe-container img{
+        padding-bottom: 2%;
+    }
+
+    #social-media-tags{
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
 }
