@@ -1,4 +1,3 @@
-
 const hikes = [
   {
     name: "Bechler Falls",
@@ -71,4 +70,87 @@ const hikes = [
     trailhead: [43.78555, -111.98996]
   }
 ];
-                
+
+// DOM items
+let hikeContainer = document.querySelector('#hike-container');
+let button = document.querySelector('button');
+
+// Search button listener
+button.addEventListener('click', search);
+
+function search() {
+  let hikeQuery = document.querySelector('#search').value.toLowerCase();
+
+  // Filter hikes
+  let filterHikes = hikes.filter(function(hike){
+    return (
+      hike.name.toLowerCase().includes(hikeQuery) ||
+      hike.description.toLowerCase().includes(hikeQuery) ||
+      hike.tags.some(tag => tag.toLowerCase().includes(hikeQuery))
+    );
+  });
+
+  // Sort by difficulty (easy → hard)
+  let sortedHikes = filterHikes.sort(compareHikes);
+  function compareHikes(a, b) {
+    return a.difficulty - b.difficulty;
+  }
+
+  // Clear screen
+  hikeContainer.innerHTML = '';
+
+  // Display results
+  sortedHikes.forEach(function(hike){
+    renderHike(hike);
+  });
+}
+
+// Random hike on load
+let randomNum = Math.floor(Math.random() * hikes.length);
+console.log(randomNum);
+
+// Tag HTML builder
+function tagTemplate(tags) {
+  return tags.map((tag)=> `<button>${tag}</button>`).join(' ');
+}
+
+// Difficulty rating HTML builder
+function difficultyTemplate(rating) {
+  let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5">Difficulty: `;
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      html += `<span aria-hidden="true" class="icon-boot"> 🥾</span>`;
+    } else {
+      html += `<span aria-hidden="true" class="icon-empty">▫️</span>`;
+    }
+  }
+  html += `</span>`;
+  return html;
+}
+
+// Hike card template
+function hikesTemplate(hike) {
+  return `<div class="hike-card">
+    <div class="hike-content">
+      <h2>${hike.name}</h2>
+      <div class="hike-tags">
+        ${tagTemplate(hike.tags)}
+      </div>
+      <p>${hike.description}</p>
+      <p>${difficultyTemplate(hike.difficulty)}</p>
+    </div>
+  </div>`;
+}
+
+// Render single hike
+function renderHike(hike) {
+  let html = hikesTemplate(hike);
+  hikeContainer.innerHTML += html;
+}
+
+// Page init: show 1 random hike
+function init() {
+  renderHike(hikes[randomNum]);
+}
+
+init();
