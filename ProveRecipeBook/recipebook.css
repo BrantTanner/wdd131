@@ -33,13 +33,13 @@ h2{
     font-size: xx-large ;
 }
 
-#recipe-container{
+.recipe-card{
     display: flex;
     flex-direction: column;
     border: 2px solid black;
     border-radius: 3%;
 }
-#recipe-container img{
+.recipe-card img{
     max-width: 95%;
     padding-left: 3%;
     padding-top: 2%;
@@ -66,7 +66,7 @@ h2{
 
 
 @media screen and (min-width: 700px ) {
-    #recipe-container{
+    .recipe-card{
         flex-direction: row;
     }
 
@@ -79,7 +79,7 @@ h2{
         text-align: left;
     }
 
-    #recipe-container img{
+    .recipe-card img{
         padding-bottom: 2%;
     }
 
