@@ -21,14 +21,17 @@
     color: #6c666b;
 }
 
-body{
-    text-align: center;
+
+
+.player-card {
+    width: 100px;
+    height: auto;
 }
 
-/* .home-content-container{
-    display: flex;
-    flex-direction: column;
-} */
+.dealer-card {
+    width: 100px;
+    height: auto;
+}
 
 footer{
     display: flex;
