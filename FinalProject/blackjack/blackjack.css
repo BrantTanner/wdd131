@@ -1,27 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Monoton&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather";
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #efdfdf;
+}
+
 .navbar {
     display: flex;
     list-style-type: none;
-    padding: 2%;
-    color: #c4434c;
-    background-color:#6c666b;
-    justify-content: space-around;
-    margin-bottom: 5%;
-
+    background-color: #292628;
 }
 
 .navbar a {
-    display: block;
-    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    flex: 1;                
+    padding: 15px;
     text-decoration: none;
-    color:#c4434c;
+    color: #ffffff;
 }
 
 .navbar a:hover {
-    background-color: #c4434c;
-    color: #6c666b;
+    background-color: #000000;
+    color: #ffffff;
 }
 
+#game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+#dealer-side{
+    text-align: center;
+    padding-bottom: 5%;
+    padding-top: 10px;
+}
+
+#player-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#player-hand-container {
+    min-height: 165px; 
+}
+
+#player-controls {
+    margin-top: 10px;
+}
 
 .player-card {
     width: 100px;
@@ -33,11 +77,35 @@
     height: auto;
 }
 
+#hit, #stand{
+    background-color: #dcd6da;
+    color:#292628;
+    height: auto;
+    width: 80px;
+    border-radius: 4px;
+    box-shadow: 0 4px #999;
+    margin-bottom: 5px;
+
+}
+
+#hit:hover, #stand:hover {
+    background-color: #292628;
+    color:#dcd6da;
+}
+
+#hit:active, #stand:active {
+  background-color: #292628;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+
 footer{
+    margin-top: auto;
     display: flex;
-    background-color: #6c666b;
-    color:#c4434c;
+    background-color: #292628;
+    color: #ffffff;
     justify-content: space-around;
     padding: 2%;
-    margin-top: 40%;
+    font-size: large;
 }

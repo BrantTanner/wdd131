@@ -5,27 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Jack</title>
     <link type="text/css" rel="stylesheet" href="blackjack.css" />
+    <link rel="icon" type="png" href="../images/favicon.png">
     <script src="blackjack.js" defer></script>
 </head>
 <body>
     <div class="navbar">
-        <a class="active" href="#">Home</a>
-        <a href="#">Play Game</a>
-        <a href="#">Rules</a>
+        <a href="/FinalProject/home/home.html">Home</a>
+        <a class="active" href="/FinalProject/blackjack/blackjack.html">Play Game</a>
+        <a href="/FinalProject/rules/rules.html">Rules</a>
+    </div>
+    
+    <div id="game-container">
+        <div id="dealer-side">
+            <div id="dealer-hand-value">
+                <p></p>
+            </div>
+            <div id="dealer-hand-container"></div>
+        </div>
+            
+
+
+        <div id="player-side">
+            <div id="player-hand-container"></div>
+            
+            <div id="player-hand-value">
+                <p>Value: </p>
+            </div>
+
+            <div id="player-controls">
+                <button button type="button" id="hit">Hit</button>
+                <button button type="button" id="stand">Stand</button>
+            </div>
+
+            
+        </div>
     </div>
 
-    <div id="dealer-hand-container"></div>
-
-
-    <div id="player-hand-container"></div>
-
-    <button button type="button" id="hit">Hit</button>
-    <button button type="button" id="stand">Stand</button>
-    
     <footer>
         <p>Author: Brant Tanner</p>
         <p>||</p>
-        <p><a href="mailto:tan21031@byui.edu">tan21031@byui.edu</a></p>
+        <p>tan21031@byui.edu</p>
         <p>||</p>
         <p>WDD 131</p>
     </footer>
